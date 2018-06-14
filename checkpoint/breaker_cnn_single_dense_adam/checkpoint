@@ -1,0 +1,3 @@
+model_checkpoint_path: "breaker_cnn_single_dense_adam-316"
+all_model_checkpoint_paths: "breaker_cnn_single_dense_adam-315"
+all_model_checkpoint_paths: "breaker_cnn_single_dense_adam-316"
