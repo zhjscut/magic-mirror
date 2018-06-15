@@ -201,7 +201,7 @@ def query_scores():
 
 
 @app.route('/object', methods=['POST'])
-def object():  
+def objects():  
     upload_file = request.files['file']
     if upload_file and allowed_file(upload_file.filename):
         filename = secure_filename(upload_file.filename)
