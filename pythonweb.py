@@ -14,6 +14,10 @@ from werkzeug.utils import secure_filename
 import os
 from ffmpy import FFmpeg
 from aip import AipSpeech
+import sys
+sys.path.append('./object')
+import mobilenet
+import zhengfang_crawler
 
 
 def get_music_path(keyword):
@@ -176,35 +180,38 @@ def upload():
 
 @app.route('/jw2005', methods=['POST'])
 def login():  
-    username_request = json.loads(request.values.get('username'))
-    password_request = json.loads(request.values.get('password'))
+    json_data = request.get_json()
+    username = json_data['username']
+    password = json_data['password']
+    crawler = zhengfang_crawler.ZhengfangCrawler(username, password)
+    isSuccess, _ = crawler._login()
+    res = json.dumps({"isSuccess": isSuccess})
+    return res  
 
+@app.route('/jw2005/query_score', methods=['POST'])
+def query_scores():
+    json_data = request.get_json()
+    username = json_data['username']
+    password = json_data['password']
+    crawler = zhengfang_crawler.ZhengfangCrawler(username, password)
+    res = crawler.get_scores() 
+    res = json.dumps(res)
+    return res  
+
+
+
+@app.route('/object', methods=['POST'])
+def object():  
     upload_file = request.files['file']
     if upload_file and allowed_file(upload_file.filename):
         filename = secure_filename(upload_file.filename)
-#         upload_file.save(os.path.join(app.root_path, app.config['UPLOAD_FOLDER'], filename))
         upload_file.save(os.path.join(app.root_path, app.config['UPLOAD_FOLDER'], filename))
-        return 'hello, '+request.form.get('name', 'little apple')+'. success'
-    else:
-        return 'hello, '+request.form.get('name', 'little apple')+'. failed'
-
-@app.route('/objects', methods=['POST'])
-def objects():  
-    upload_file = request.files['file']
-    if upload_file and allowed_file(upload_file.filename):
-        filename = secure_filename(upload_file.filename)
-        print(app.root_path)
-        upload_file.save(os.path.join(app.root_path, app.config['UPLOAD_FOLDER'], filename))
-        return 'hello, '+request.form.get('name', 'little apple')+'. success'
+        res = mobilenet.predict(os.path.join(app.root_path, app.config['UPLOAD_FOLDER'], filename))
+        res = json.dumps(res)
+        return res
     else:
         return 'hello, '+request.form.get('name', 'little apple')+'. failed'
     
     
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=6007, debug=True) #6007端口，浏览器要访问1115端口
-
-
-
-
-
-

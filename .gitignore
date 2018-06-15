@@ -1,0 +1,4 @@
+./static
+./static/uploads
+./checkpoint
+./__pycache__
