@@ -1,0 +1,21 @@
+.container{
+  display: flex;
+  width: 100vmin;
+  justify-content: space-around;
+  align-items: center;
+}
+.first-banner{ 
+  width: 500rpx;
+  height: 350rpx;
+}
+.nav-default{
+  color:blue;
+}
+.nav-hover{
+  color:red;
+}
+.button-style{    
+    background-color: #eee;    
+    border-radius: 8rpx;    
+    margin: 20rpx;    
+}    

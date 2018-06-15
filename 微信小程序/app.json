@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/first/first",
+    "pages/us/us",
+    "pages/music/music",
+    "pages/music/test/test",    
+    "pages/weather/weather",
+    "pages/voices/voices",
+    "pages/objects/objects",
+    "pages/navigator/navigator",
+    "pages/faces/faces",
+    "pages/moniter/moniter",
+    "pages/jw2005/jw2005",
+    "pages/jw2005/function/function",
+    "pages/jw2005/function/empty_classroom/empty_classroom",
+    "pages/jw2005/function/exam_score/exam_score",
+    "pages/jw2005/function/school_timetable/school_timetable"
+  ]
+}

@@ -1,0 +1,13 @@
+/* pages/music/music.wxss */
+.button-style{    
+    background-color: #eee;    
+    border-radius: 8rpx;    
+    margin: 20rpx;    
+}    
+.textstyle{
+  display: flex;
+  justify-content: center;
+}
+.itemView{
+  display: flex;
+}

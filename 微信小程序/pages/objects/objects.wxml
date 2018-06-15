@@ -1,0 +1,9 @@
+<!--pages/objects/objects.wxml-->
+<view class="description">
+  <text class="text-style" id="title" >{{ title }}</text>
+  <text class='text-style' id="content" >{{ content }}</text>
+  
+</view>
+<button class="button-style" bindtap="chooseAImage" hidden='{{ isChooseHidden }}'>选择图片</button>
+<button class="button-style" id="identify-button" bindtap="identifyImage" hidden="{{ isIdentifyHidden }}">识别！</button>
+<image class='image-style' src="{{tempFilePaths }}" mode='widthFix' />

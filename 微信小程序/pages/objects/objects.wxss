@@ -1,0 +1,33 @@
+/* pages/objects/objects.wxss */
+.button-style{    
+    background-color: #eee;    
+    border-radius: 8rpx;    
+    margin: 20rpx;
+}
+.image-style{
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  margin: 20rpx;
+}
+#identify-button{
+  color: ivory;
+  background-color:forestgreen;
+}
+#title{
+  display: flex;
+  color:black;
+  font-size: 1.5em;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10pt 10pt 10pt;
+  margin: 10pt 5pt 10pt;
+}
+#content{
+  display: flex;
+  color:dimgray;
+  padding: 10pt 10pt 10pt;
+  margin: 10pt 5pt 10pt;
+
+}

@@ -1,0 +1,21 @@
+<!-- pages/music/music.wxml -->
+<view class="section">
+
+        
+        <text space="nbsp">可以直接输入文本哟</text> 
+      <view class="itemView">  
+        <text space="nbsp">Q:  </text>       
+        <input  bindinput="set_chatting_word" placeholder="在这里输入"/> 
+      </view>   
+  <button class="button-style" bindtap="searchButton">search</button>  
+
+    <!-- <audio id= "myaudio" name="{{music_name}}" src="{{music_path}}" controls="True" bindpause='music_pause'></audio> -->
+  <button class="button-style" bindtouchstart="record_start" bindtouchend="record_end">record</button> 
+  <view> <text>识别结果: {{content}}</text> </view>
+  <view> <text>A: {{result_word}}</text> </view>
+  <image class='image-style' mode='widthFix' src="{{result_image}}"></image> 
+  <!-- <button class="button-style" bindtap="testButton">test</button>   -->
+
+  
+</view>   
+<!-- <web-view src="https://www.baidu.com"></web-view> -->

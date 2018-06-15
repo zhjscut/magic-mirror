@@ -1,0 +1,10 @@
+<view class='container'>
+<navigator open-type='navigate' url='/pages/us/us'><image src='/images/mark.jpg' class='first-banner'></image></navigator>
+</view>
+<navigator open-type='navigate' url='/pages/music/music'><button class='button-style'>音乐盒</button></navigator>
+<navigator open-type='navigate' url='/pages/weather/weather'><button class='button-style'>天气不错</button></navigator>
+<navigator open-type='navigate' url='/pages/voices/voices'><button class='button-style'>来聊天吧</button></navigator>
+<navigator open-type='navigate' url='/pages/objects/objects'><button class='button-style'>轻松一下</button></navigator>
+ <navigator open-type='navigate' url='/pages/moniter/moniter'><button class='button-style'>监控/物体识别（摄像头）</button></navigator> 
+<navigator open-type='navigate' url='/pages/faces/faces'><button class='button-style'>人脸识别</button></navigator>
+<navigator open-type='navigate' url='/pages/jw2005/jw2005'><button class='button-style'>我要学习</button></navigator>

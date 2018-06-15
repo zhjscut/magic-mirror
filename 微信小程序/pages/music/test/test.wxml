@@ -1,0 +1,2 @@
+<!--pages/music/test/test.wxml-->
+<web-view src="http://120.77.207.13:1115/replay/filename=decoded_2018_06_14_08_45_39.wav"></web-view>   

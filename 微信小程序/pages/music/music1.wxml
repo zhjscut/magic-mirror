@@ -1,0 +1,29 @@
+<!-- pages/music/music.wxml -->
+<view class="section">
+   <button class="button-style" bindtap="listenerButtonPlay">play</button>  
+  <button class="button-style" bindtap="listenerButtonPause">pause</button>  
+  <button class="button-style" bindtap="listenerButtonStop">stop</button>   
+  <button class="button-style" bindtap="searchButton">search</button>  
+    <!-- <view class="section__title">想听什么歌？ </view> -->
+    <view class="itemView">
+      <text space="nbsp">   想听什么歌？</text>
+      <input  bindinput="set_music_name" placeholder="在这里输入"/>
+    </view>
+
+    <!-- <audio id= "myaudio" name="{{music_name}}" src="{{music_path}}" controls="True" bindpause='music_pause'></audio> -->
+    <view style="justify-content: space-between;">
+        <text space="nbsp">  {{currentPosition}}         {{music_name_return}}            {{duration}}  </text><!-- 如不加space="nbsp"，代码段中的多个空格会变成一个空格 -->
+    </view>
+      <slider bindchange="slidechange" bindtouchstart="" bindtouchend="" max="{{durationNum}}" min="0" value="{{currentPositionNum}}"></slider>  
+     <!-- <slider bindchange="slidechange" bindtouchstart="" bindtouchend="" value="{{currentProcessNum}}"></slider>  -->
+  <button class="button-style" bindtouchstart="record_start" bindtouchend="record_end">record</button> 
+  <button class="button-style" bindtap="replay">replay</button> 
+  <text>识别结果: {{content}}</text>
+  <navigator open-type='navigate' url='/pages/music/test/test'><button class='button-style'>test</button></navigator>
+  <!-- <button class="button-style" bindtap="testButton">test</button>   -->
+      <!-- <audio id= "myaudio" name="{{music_name}}" src="http://120.77.207.13:1115/replay/filename=decoded_2018_06_14_08_45_39.wav" controls="True" bindpause='music_pause'></audio>      -->
+  <!-- <button class="button-style" bindtap="download">download</button>   -->
+       <!-- <web-view src="http://120.77.207.13:1115/replay/filename=decoded_2018_06_14_08_45_39.wav"></web-view>   -->
+
+  
+</view>   

@@ -1,0 +1,36 @@
+<view class="itemView">
+  <text space="nbsp">  校区  </text>
+    <view class='select_box'>
+        <view class='select' catchtap='selectTap_xq'>
+            <text class='select_text'>{{xqData[index_xq]}}</text>
+            <image class='select_img {{show_xq&&"select_img_rotate"}}' src='./gobottom.png'></image>          
+        </view>
+        <view class='option_box' style='height:{{show_xq?(xqData.length>5?300:xqData.length*60):0}}rpx;'>
+            <text class='option' style='{{index==xqData.length-1&&"border:0;"}}' wx:for='{{xqData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap_xq'>{{item}}</text>
+        </view>
+    </view>
+</view>
+<text>\n</text>
+<view class="itemView">
+  <text space="nbsp">  教室\n  类别  </text>
+    <view class='select_box'>
+        <view class='select' catchtap='selectTap_jslb'>
+            <text class='select_text'>{{jslbData[index_jslb]}}</text>
+            <image class='select_img {{show_jslb&&"select_img_rotate"}}' src='./gobottom.png'></image>          
+        </view>
+        <view class='option_box' style='height:{{show_jslb?(jslbData.length>5?300:jslbData.length*60):0}}rpx;'>
+            <text class='option' style='{{index==jslbData.length-1&&"border:0;"}}' wx:for='{{jslbData}}' wx:key='this' data-index='{{index}}' catchtap  ='optionTap_jslb'>{{item}}</text>
+        </view>
+    </view>
+</view>
+<text>\n\n</text>
+
+<view class="itemView">
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{dateArray}}" range-key="{{'name'}}">
+    <view class="picker"><text space="nbsp">  选择查询日期：</text>第{{weeks[multiIndex[1]].name}}周 周{{days[multiIndex[3]].name}}
+  </view>
+  </picker>
+  <button class="button-style" bindtap="search" height="300px">查询</button> 
+  
+</view>
+<text>{{warning}}</text>

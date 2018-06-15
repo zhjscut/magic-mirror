@@ -1,0 +1,12 @@
+<!--pages/navigator/navigator.wxml-->
+
+<view class="section">
+<button class="button-style" bindtap="clickButton">click</button> 
+<button class="button-style" bindtap="clickButton2">click2</button> 
+  <view class="section__title">今天你想吃什么？{{inputValue}}</view>
+  <input  bindinput="bindKeyInput" placeholder="在这里输入"/>
+  <text>{{clickdata}}</text>
+  <text>{{weatherdata}}</text>
+
+</view>
+

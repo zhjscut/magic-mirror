@@ -1,0 +1,17 @@
+/* pages/us/us.wxss */
+
+.first-banner{ 
+  width: 500rpx;
+  height: 350rpx;
+}
+.image-style{
+  display: inline-block;
+  vertical-align: middle;
+  width: 30%;
+  margin: 20rpx;
+}
+.article-style{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 25px
+}

@@ -1,0 +1,15 @@
+<view class="section">
+ <image class='image-style' mode='widthFix' src='./logo.jpg'></image> 
+<text>\n\n</text>
+  <view class="itemView">
+    <text space="nbsp"> 用户名  </text>
+    <input class='input' bindinput="set_username" placeholder=" 在这里输入用户名"/>      
+  </view>
+  <text>\n</text>
+  <view class="itemView">
+    <text space="nbsp">   密码   </text>
+    <input class='input' bindinput="set_password" password="true" placeholder=" 在这里输入密码"/>
+  </view>
+  <text>\n</text>
+ <button class="button-style" bindtap="login" loading='{{ isLoading }}'>登录</button> 
+</view> 

@@ -1,0 +1,15 @@
+<!--pages/navigator/navigator.wxml-->
+
+
+ <!-- <web-view src="https://192.168.1.209:8080"></web-view>  -->
+<view>
+<text>website:</text>
+</view>
+<view>
+<input value="{{website}}"></input>
+</view>
+<view>
+<input value="https://192.168.1.209:8080"></input>
+</view>
+    <!-- <web-view src="http://10.29.29.107:8080/"></web-view>     -->
+

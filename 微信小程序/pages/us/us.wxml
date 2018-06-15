@@ -1,0 +1,22 @@
+<!--pages/us/us.wxml-->
+<view>
+<image src='/images/lwf.jpg' class='image-style' mode='widthFix'></image>
+<text class='article-style' space='nbsp'>   WF Liu</text>
+</view>
+<view>
+<image src='/images/zhj.jpg' class='image-style' mode='widthFix'></image>
+<text class='article-style' space='nbsp'>   HJ Zhang</text>
+</view>
+<view>
+<image src='/images/cyh.jpg' class='image-style' mode='widthFix'></image>
+<text class='article-style' space='nbsp'>   YH Chen</text>
+</view>
+<view>
+<image src='/images/jzy.jpg' class='image-style' mode='widthFix'></image>
+<text class='article-style' space='nbsp'>   ZY Jiang</text>
+</view>
+<view>
+<image src='/images/lyz.jpg' class='image-style' mode='widthFix'></image>
+<text class='article-style' space='nbsp'>   YZ Lin</text>
+</view>
+

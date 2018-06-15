@@ -1,0 +1,31 @@
+<!-- pages/music/music.wxml -->
+<view class="section">
+<view class="control-view">
+  <button class="button-style" bindtap="listenerButtonPlay">播放</button>  
+  <button class="button-style" bindtap="listenerButtonPause">暂停</button>  
+  <button class="button-style" bindtap="listenerButtonStop">停止</button>   
+  <button class="button-style" bindtap="searchButton">搜歌</button>
+</view>
+
+  <text>\n</text>
+    <!-- <view class="section__title">想听什么歌？ </view> -->
+    <view class="itemView">
+      <text space="nbsp">   想听什么歌？</text>
+      <input  bindinput="set_music_name" placeholder="在这里输入"/>
+    </view>
+
+    <!-- <audio id= "myaudio" name="{{music_name}}" src="{{music_path}}" controls="True" bindpause='music_pause'></audio> -->
+    <view style="display: flex; justify-content: space-between;">
+    <text class='start' space="nbsp"> {{currentPosition}}</text>
+    <text class='end' space="nbsp">{{duration}} </text>
+ <!-- 如不加space="nbsp"，代码段中的多个空格会变成一个空格  -->
+    </view>  
+      <slider bindchange="slidechange" bindtouchstart="" bindtouchend="" max="{{durationNum}}" min="0" value="{{currentPositionNum}}"></slider>  
+     <!-- <slider bindchange="slidechange" bindtouchstart="" bindtouchend="" value="{{currentProcessNum}}"></slider>  -->
+<view class="control-view">
+  <button class="button-style" bindtouchstart="record_start" bindtouchend="record_end">录音</button> 
+  <button class="button-style" bindtap="replay">回放</button> 
+</view>
+  <text>识别结果: {{content}}</text>
+  <text>{{answer}}</text>     
+</view> 

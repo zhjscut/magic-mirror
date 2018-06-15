@@ -1,0 +1,8 @@
+<view class="section">
+<text>\n</text>
+  <text class='textstyle'>欢迎你，{{name}}同学</text>
+  <text>\n</text>
+  <button class="button-style" bindtap="empty_classroom">empty classroom</button>  
+  <button class="button-style" bindtap="exam_score">exam score</button>  
+  <button class="button-style" bindtap="school_timetable">school timetable</button>  
+</view> 

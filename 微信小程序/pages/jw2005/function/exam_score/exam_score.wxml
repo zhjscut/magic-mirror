@@ -1,0 +1,30 @@
+<view class="top-menu">
+  <view bindtap="showMenuTap" data-type="1">学年</view>
+  <view class="line"></view>
+  <view bindtap="showMenuTap" data-type="2">学期</view>
+</view>
+
+<scroll-view scroll-x="true" scroll-y="true" id="scroll-view">
+<view class="table">  
+  <view class="tr bg-w">  
+    <view class="th">课程</view>  
+    <view class="th">成绩</view>  
+    <view class="th ">学分</view>  
+    <view class="th ">课程性质</view>  
+  </view>
+</view> 
+  <block wx:for="{{listData}}" wx:key="{{code}}">  
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">  
+      <view class="td">{{item.lesson}}</view>  
+      <view class="td">{{item.score}}</view>  
+      <view class="td">{{item.credit}}</view>  
+      <view class="td">{{item.lesson_type}}</view>
+    </view>  
+    <view class="tr" wx:else>  
+      <view class="td">{{item.lesson}}</view>  
+      <view class="td">{{item.score}}</view>  
+      <view class="td">{{item.credit}}</view>  
+      <view class="td">{{item.lesson_type}}</view>      
+    </view>  
+  </block>  
+</scroll-view>
