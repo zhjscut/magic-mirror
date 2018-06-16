@@ -107,8 +107,8 @@ def listen_music():
                 content = music_name_request
                 music_path, music_name = magic_mirror_voice.get_music_path(music_name_request) #music_path是json格式的音频url，可以直接返回
             replay_filename = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime()) 
-#             replay_path = 'http://120.77.207.13:1115/replay/filename=decoded_' + replay_filename + '.wav'
-            replay_path = 'http://127.0.0.1:6007/replay/filename=decoded_' + replay_filename + '.wav'
+            replay_path = 'http://120.77.207.13:1115/replay/filename=decoded_' + replay_filename + '.wav'
+#             replay_path = 'http://127.0.0.1:6007/replay/filename=decoded_' + replay_filename + '.wav'
             print(replay_path)
             result = {'music_path': music_path, 'music_name': music_name, 'content': content, 'replay_path': replay_path}
     except Exception as e:#可能是手动输入的请求数据   
@@ -155,8 +155,8 @@ def chat():
                 with open(answer_filename, 'wb') as f:
                     f.write(result_tts)    
             result_voice_time = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime()) 
-#             result_voice = 'http://120.77.207.13:1115/replay/filename=answer_' + result_voice_time                    
-            result_voice = 'http://127.0.0.1:6007/replay/filename=answer_' + result_voice_time + '.wav'
+            result_voice = 'http://120.77.207.13:1115/replay/filename=answer_' + result_voice_time                    
+#             result_voice = 'http://127.0.0.1:6007/replay/filename=answer_' + result_voice_time + '.wav'
             
     except Exception as e:#可能是手动输入的请求数据   
         print('异常信息 in listen_music() try：', e)
@@ -169,8 +169,8 @@ def chat():
             with open(answer_filename, 'wb') as f:
                 f.write(result_tts)   
         result_voice_time = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime()) 
-#             result_voice = 'http://120.77.207.13:1115/replay/filename=answer_' + result_voice_time                    
-        result_voice = 'http://127.0.0.1:6007/replay/filename=answer_' + result_voice_time + '.wav'   
+            result_voice = 'http://120.77.207.13:1115/replay/filename=answer_' + result_voice_time                    
+#         result_voice = 'http://127.0.0.1:6007/replay/filename=answer_' + result_voice_time + '.wav'   
 
     result = {'result_word': result_word, 'result_image': result_image, 'result_voice': result_voice, 'content': content}
     return json.dumps(result)
