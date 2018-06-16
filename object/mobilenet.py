@@ -4,7 +4,7 @@ from nets.mobilenet import mobilenet_v2
 import tensorflow as tf
 from datasets import imagenet
 
-checkpoint = '/mnt/b1/pretrained_models/mobilenet_v2_1.0_244/mobilenet_v2_1.0_224.ckpt'
+checkpoint = '/mnt/b1/pretrained_models/mobilenet_v2_1.0_224/mobilenet_v2_1.0_224.ckpt'
 
 def getMobileNet(checkpoint):
     graph = tf.Graph()

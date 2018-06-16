@@ -147,8 +147,9 @@ def chat():
                 result_image = ''
                 result_voice = ''
                 content = '没有识别到内容'
-            else:            
-                result_word, result_image = magic_mirror_voice.get_result_chat(result_stt['result'][0]) #获得图灵机器人的回复，可能包含文字和图片信息
+            else: 
+                content = result_stt['result'][0]
+                result_word, result_image = magic_mirror_voice.get_result_chat(content) #获得图灵机器人的回复，可能包含文字和图片信息
             result_tts = client.synthesis(result_word, 'zh', 1, {'vol': 5, 'per': 4}) #把文字回复转成语音回复
             answer_filename = os.path.join(app.root_path, app.config['UPLOAD_FOLDER'], 'answer.wav')
             if not isinstance(result_tts, dict):
@@ -169,7 +170,7 @@ def chat():
             with open(answer_filename, 'wb') as f:
                 f.write(result_tts)   
         result_voice_time = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime()) 
-            result_voice = 'http://120.77.207.13:1115/replay/filename=answer_' + result_voice_time                    
+        result_voice = 'http://120.77.207.13:1115/replay/filename=answer_' + result_voice_time                    
 #         result_voice = 'http://127.0.0.1:6007/replay/filename=answer_' + result_voice_time + '.wav'   
 
     result = {'result_word': result_word, 'result_image': result_image, 'result_voice': result_voice, 'content': content}
