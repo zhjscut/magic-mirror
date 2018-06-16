@@ -156,7 +156,7 @@ def chat():
                 with open(answer_filename, 'wb') as f:
                     f.write(result_tts)    
             result_voice_time = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime()) 
-            result_voice = 'http://120.77.207.13:1115/replay/filename=answer_' + result_voice_time                    
+            result_voice = 'http://120.77.207.13:1115/replay/filename=answer_' + result_voice_time + '.wav'                    
 #             result_voice = 'http://127.0.0.1:6007/replay/filename=answer_' + result_voice_time + '.wav'
             
     except Exception as e:#可能是手动输入的请求数据   
@@ -170,7 +170,7 @@ def chat():
             with open(answer_filename, 'wb') as f:
                 f.write(result_tts)   
         result_voice_time = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime()) 
-        result_voice = 'http://120.77.207.13:1115/replay/filename=answer_' + result_voice_time                    
+        result_voice = 'http://120.77.207.13:1115/replay/filename=answer_' + result_voice_time + '.wav'                    
 #         result_voice = 'http://127.0.0.1:6007/replay/filename=answer_' + result_voice_time + '.wav'   
 
     result = {'result_word': result_word, 'result_image': result_image, 'result_voice': result_voice, 'content': content}
